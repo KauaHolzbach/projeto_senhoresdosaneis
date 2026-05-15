@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 #titulo_top{
     background-color:#8B6F1E;
     color: white;
@@ -8,10 +9,171 @@
     color: white;
 }
 
-#layout{
-    display: flex;
-}
 
 .rodape{
     text-align: center;
 }
+
+body{
+    /*Topografia CSS*/
+    background-color: rgb(0,0,0); /*Cor do fundo*/
+    color: rgb(255,255,255); /*Cor da fonte*/
+    font-family: "Roboto", sans-serif;
+    font-size: 16px; /*Tamanho da fonte - px/em/rem*/
+}
+
+#layout{
+    font-size: 1em; /*Jerda p tamanho do pai dele (body) com um multiplicado*/
+    display: flex;
+    flex-direction: column; /*Usado para definir a direção dos elementos que são filhos de um display flex*/
+    font-style: normal; /*Estilo da fonte: italic - normal - oblique*/ 
+    line-height: 30px; /*Espaçamneto entre linhas*/
+    font-weight: 400; /*Negrito em CSS 100 a 900 bold e bolder*/
+    text-transform: none; /*Capitalização do texto: uppercase - lowercase e capitalize*/
+    text-decoration: none; /*Sublinhado de texto: double - dashed - dotted - wavy - none*/
+    word-spacing: 5px; /*Espaçamentos entre palavras*/
+    letter-spacing: none; /*Espaçamento entre letras*/  
+    text-indent: 20px; /*Espaçamento de paragafro primeira linha*/
+    text-align: justify; /*Alinhamento do texto: left - right - justify e center*/
+    /*border-style: dashed; /*Estilo da borda (da div): solid, dashed, dotted, double, groove, ridge, inset, outset
+    border-width: 5px; /*Espessaura da borda
+    border-color: rgb(52, 235, 164); /*Cor da borda*/
+    border: dashed 5px rgb(52, 235, 164); /*Definir estilo, espessura e cor da borda numa mesma linha*/
+    border-top: dotted 10px rebeccapurple;
+    border-left: dotted 20px red;
+    border-bottom: solid 15px #fff000;
+    /*border-right: estilizar lado direito da borda*/
+    border-radius: 50px; /*Arredondar cantos da borda (sup esq = 1, sup dir = 2, inf dir = 3, inf esq = 4)*/
+    margin: 20px; /*Margen do lado de FORA da borda (cima = 1, direita = 2, baixo = 3, esquerda = 4)*/
+    margin-left: 20px; /*Margem a esqueda fora da borda*/
+    margin-right: 20px; /*Margem a direita fora da borda*/
+    margin-bottom: 20px; /*Margem de baixo fora da borda*/
+    margin-top: auto; /*Margem de cima fora da borda*/
+    /*padding: 20px 60px 100px 200px; /*Margem DENTRO da Borda (cima = 1, direita = 2, baixo = 3, esquerda = 4)*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    color: black;
+    opacity: 0.7;
+}
+
+.transicao{
+    background-color: white;
+    border: solid 3px red;
+    color: black;
+    width: 300px;
+    height: 300px;
+    transition-duration: 3s; /*Define o tempo de transição*/
+    transition-property: width, background-color; /*Define quais propriedades CSS irão entrar na transição*/
+    transition-delay: 0.5s; /*Delay para inciar a transição*/
+    transition-timing-function: ease; /*ease-in, ease-out, linear, ease, ease-in-out*/
+}
+
+.transicao:hover{
+    background-color: pink;
+    width: 600px;
+    color: blue;
+}
+
+#email:focus{
+    background-color: green;
+    color: white;
+}
+
+#teste_estilo_lista_ul{
+    list-style-type: none; /*disc, circle, none. Defini o estilo do marcador dae lista não ordenada(UL)*/
+}
+
+#teste_estilo_lista_ol{
+    list-style-type: upper-alpha; /*decimal - lower-roman - upper-roma - lower-greek - lower-alpha - upper-alpha. Defini o estilo de marcadores de listas ordenadas*/
+    list-style-image: url("img/seta_direita_vermelha.png"); /*Carrega imagem ao fundo do elemento html*/
+}
+
+li{
+    border: solid 3px orange;
+    list-style-position: outside; /*Ele serve para dizer ao navegador se o marcador da lista faz parte ou não do texto da lista: inside e outside*/
+}
+
+#impacto{
+
+    /*background:url("img/senhordosaneis_fundo.jpg") no-repeat; resume a imagem de fundo e repetição em uma linha*/
+    background-image: url("img/senhordosaneis_fundo.jpg");
+    background-repeat: no-repeat; /* no-repeat / repeat / repeat-y / repeat-x. Configura a forma como a imagem irá repetir ao fundo do elemento html*/
+    /*background-position: center; /*left, right, top, bottom, center e pode usar dois ao mesmo tempo
+    width: 2000px;
+    height: 1500px*/
+    background-size: cover; /*Serve para definir COMO a imagem será exibida ao fundo do elemento html - contain, cover, px. %, auto*/
+    background-attachment: fixed; /*Defini como a imagem vai lidar com scroll ao fundo do elemento html - scroll e fixed*/
+    text-shadow: 3px 3px 2px red; /*Define a sombra do texto*/
+    position: relative;
+}
+
+.noticia{
+    border:solid 3px white;
+    width: 200px;
+    position: fixed; /*Define o posicionamento atras ou na frente dos elementos html: fixed, relative, absolute e static*/
+    height: 100px;
+    overflow: auto; /*Configura o comportamento de quando por exemplo um texto passa das bordas de um elemento html (da um overflow) visible, hiddem. scroll, auto*/
+    box-shadow: 3px 3px 3px 3px orange; /*Define a sombra de um elemento html de bloco*/
+}
+
+h1{
+    animation-name: multicolor;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards; /*forwards - backwards*/
+    animation-iteration-count: infinite; /* Quantidade de animações/infinite*/
+}
+
+@keyframes multicolor{
+    from{color: red;}
+    to{color: blue;}
+}
+
+.animacao img{
+    display: block;
+    animation-name: foguete;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes foguete{
+    0%{margin-left: 0%}
+    25%{margin-left: 80%; transform: rotate(0deg)}
+    50%{margin-left: 80%; transform: rotate(-120deg)}
+    75%{margin-left: 0%; transform: rotate(-120deg)}
+    100%{margin-ledt: 0%; transform: rotate(0deg)}
+}
+
+.um{
+    background-color: blue;
+    top: 0px;
+    left: 30px;
+    z-index: 3 /*Define a ordem que o elemento vai ficar uns atras dos outros*/
+}
+
+.dois{
+    background-color: red;
+    top: 40px;
+    left: 150px;
+}
+
+.tres{background-color:green;
+top:200px;
+left: 250px;
+}
+
+/*.teste_display{
+    background-color: orange;
+    display: inline-block;
+    width: 200px;
+}/*
